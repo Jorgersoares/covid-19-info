@@ -19,20 +19,17 @@ export default function Chart(props) {
     const configObj = {
         dataPie: {
             labels: [`Casos confirmados ${props.countrie.TotalConfirmed}`,
-            `Curados ${props.countrie.TotalRecovered}`,
             `Mortes ${props.countrie.TotalDeaths}`
             ],
             datasets: [
                 {
-                    data: [props.countrie.TotalConfirmed, props.countrie.TotalRecovered, props.countrie.TotalDeaths],
+                    data: [props.countrie.TotalConfirmed, props.countrie.TotalDeaths],
                     backgroundColor: [
                         '#F7464A',
-                        '#46BFBD',
                         '#FDB45C',
                     ],
                     hoverBackgroundColor: [
                         '#FF5A5E',
-                        '#5AD3D1',
                         '#FFC870',
                     ]
                 }
